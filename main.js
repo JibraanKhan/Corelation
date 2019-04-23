@@ -52,10 +52,10 @@ var initialize = function(data){
   // ]
   var texts = [
     '0.8 –– 1',
-    '0.2 –– 0.8',
-    '-0.3 –– 0.2',
-    '-0.6 –– -0.3',
-    '-1 –– -0.6',
+    '0.2 –– 0.79',
+    '-0.3 –– 0.19',
+    '-0.6 –– -0.31',
+    '-1 –– -0.61',
   ]
   var plottingPlace = svg.append('g')
                          .classed('Graph', true)
@@ -78,13 +78,13 @@ var initialize = function(data){
                      .attr('width', xScale.bandwidth)
                      .attr('height', h/new_dataset.length - (padding))
                      .attr('fill', function(){
-                       if (r > 0.8 && r <= 1){
+                       if (r >= 0.8 && r <= 1){
                          return color(texts[0])
-                     }else if (r > 0.2 && r <= 0.8){
+                     }else if (r >= 0.2 && r <= 0.79){
                        return color(texts[1])
-                     }else if(r > -0.3 && r <= 0.2){
+                     }else if(r >= -0.3 && r <= 0.19){
                        return color(texts[2])
-                     }else if(r > -0.6 && r <= -0.3){
+                     }else if(r > -0.6 && r <= -0.31){
                        return color(texts[3])
                      }else{
                        return color(texts[4])
