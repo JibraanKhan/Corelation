@@ -119,13 +119,6 @@ var initialize = function(data){
                   .classed('legend', true)
   var padding = 0.1;
   var rect_height = (legend_h * 0.3)/texts.length - ((legend_h/texts.length) * padding)
-  var texts = [
-    '0.8 –– 1',
-    '0.2 –– 0.8',
-    '-0.3 –– 0.2',
-    '-0.6 –– -0.3',
-    '-1 –– -0.6',
-  ]
   var legend_lines = legend.selectAll('g')
                            .data(texts)
                            .enter()
