@@ -119,6 +119,18 @@ var initialize = function(data){
                   .classed('legend', true)
   var padding = 0.1;
   var rect_height = (legend_h * 0.3)/texts.length - ((legend_h/texts.length) * padding)
+  var texts = [
+    '0.8 –– 1',
+    '0.2 –– 0.8',
+    '-0.3 –– 0.2',
+    '-0.6 –– -0.3',
+    '-1 –– -0.6',
+  ]
+  var legend_header = legend.append('text')
+                            .attr('x', 0)
+                            .attr('y', 0 - legend_margins.top * 0.5)
+                            .attr('fill', '#e87676')
+                            .text('Correlation Indicator')
   var legend_lines = legend.selectAll('g')
                            .data(texts)
                            .enter()
